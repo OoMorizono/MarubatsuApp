@@ -87,9 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ogI-Ys-EH8"/>
                     <connections>
-                        <outlet property="noButton" destination="cnP-Mh-Hjk" id="Eo1-ek-2sJ"/>
                         <outlet property="questionLabel" destination="ggg-NB-a8k" id="ken-UZ-hQh"/>
-                        <outlet property="yesButton" destination="CgS-6Z-dVk" id="aQz-JN-c6R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,13 +97,13 @@
         <!--Question View Controller-->
         <scene sceneID="h53-SU-L7Z">
             <objects>
-                <viewController id="hUS-Gt-jH2" customClass="QuestionViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="hUS-Gt-jH2" customClass="QuestionViewController" customModule="MarubatsuApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1xy-MU-CVA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="問題を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLO-6C-Q9U">
-                                <rect key="frame" x="40" y="406" width="334" height="30"/>
+                                <rect key="frame" x="40" y="433" width="334" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eZY-Rx-WX2"/>
                                 </constraints>
@@ -113,7 +111,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQj-ah-jkf">
-                                <rect key="frame" x="159.5" y="8" width="95" height="30"/>
+                                <rect key="frame" x="159.5" y="52" width="95" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="z2m-xm-NWw"/>
                                 </constraints>
@@ -124,7 +122,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y16-EJ-q3d">
-                                <rect key="frame" x="147" y="486" width="120" height="31"/>
+                                <rect key="frame" x="147" y="513" width="120" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1HQ-h2-zRm"/>
                                     <constraint firstAttribute="width" constant="120" id="5db-Rg-Q42"/>
@@ -135,7 +133,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-Wb-vVN">
-                                <rect key="frame" x="180.5" y="566" width="53" height="30"/>
+                                <rect key="frame" x="180.5" y="593" width="53" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Wsw-WM-xOT"/>
                                 </constraints>
@@ -146,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH4-ZV-AlW">
-                                <rect key="frame" x="159" y="748" width="96" height="30"/>
+                                <rect key="frame" x="159" y="802" width="96" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="iQL-YL-C61"/>
                                 </constraints>

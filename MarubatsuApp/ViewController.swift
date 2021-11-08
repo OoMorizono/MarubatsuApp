@@ -10,8 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var noButton: UIButton! //追加！
-     @IBOutlet weak var yesButton: UIButton! //追加！
     
     // 表示中の問題番号を格納
     var currentQuestionNum: Int = 0
