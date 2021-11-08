@@ -10,30 +10,32 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var noButton: UIButton! //追加！
+     @IBOutlet weak var yesButton: UIButton! //追加！
     
     // 表示中の問題番号を格納
     var currentQuestionNum: Int = 0
+    var questions:[[String: Any]] = [] // <-【追加】作成した問題を保存するために使う配列
 
-    // 問題
-    let questions: [[String: Any]] = [
-        [
-            "question": "○地さんはいつも()が悪そうな顔をしている→()の中に入るのは何",
-            "answer": false
-        ],
-        [
-            "question": "()書いてちょん→()の中に入るのは何",
-            "answer": true
-        ],
-        [
-            "question": "くりえみの前では○地さんも､盛のついた動物そのものだ",
-            "answer": true
-        ]
-    ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showQuestion()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        //TOPに戻るボタンで戻ったときを含む画面表示される直前にquestions配列を初期化（空に）してUserDefaultsから読み込ませて表示
+            questions = []
+            let userDefaults = UserDefaults.standard
+            if userDefaults.object(forKey: "questions") != nil {
+                questions = userDefaults.object(forKey: "questions") as! [[String: Any]]
+            }
+            showQuestion()
+    }
+    
+    
     
     @IBAction func tappedNoButton(_ sender: Any) {
         checkAnswer(yourAnswer: false)
@@ -45,12 +47,16 @@ class ViewController: UIViewController {
     }
     
     func showQuestion() {
-        let question = questions[currentQuestionNum]
+        if questions.isEmpty == true {
+               questionLabel.text = "問題がありません、問題を作りましょう！"
+           } else {
+               let question = questions[currentQuestionNum]
 
-        if let que = question["question"] as? String {
-            questionLabel.text = que
-        }
-    }
+               if let que = question["question"] as? String {
+                   questionLabel.text = que
+               }
+           }
+       }
     
     func checkAnswer(yourAnswer: Bool) {
 
