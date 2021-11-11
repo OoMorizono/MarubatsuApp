@@ -28,7 +28,7 @@
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedYesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MC4-Fe-RrE"/>
+                                    <action selector="tappedYesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88u-Wh-mUm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-Mh-Hjk">
@@ -43,7 +43,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedNoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yjR-aZ-UEy"/>
+                                    <action selector="tappedNoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQS-aX-tIf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfR-Jo-dNY">
@@ -87,7 +87,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ogI-Ys-EH8"/>
                     <connections>
-                        <outlet property="questionLabel" destination="ggg-NB-a8k" id="ken-UZ-hQh"/>
+                        <outlet property="questionLabel" destination="ggg-NB-a8k" id="XDI-ma-U8R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
